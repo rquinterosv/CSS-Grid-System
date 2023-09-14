@@ -4,6 +4,7 @@
 }
 
 header {
+    grid-area: header;
     background-color: blueviolet;
     color: aliceblue;
     text-align: center;
@@ -11,38 +12,53 @@ header {
 }
 
 main {
-    display: flex;
+    grid-area: main;
 }
 
-main .aside-bar {
+.aside-bar {
     background-color: antiquewhite;
-    width: 250px;
-    min-height: 86vh;
+    min-height: 40vh;
     padding: 25px;
 }
 
-main .aside-bar ul {
+.aside-bar ul {
     list-style: none;
 }
 
-main .grilla {
-    display: flex;
-}
 
-main .grilla .card {
+.grilla .card {
     text-align: center;
     padding: 20px;
 }
 
-
-
-main .grilla .card img {
+.grilla .card img {
     width: 200px;
 }
 
-
-
 footer {
+    grid-area: footer;
     text-align: center;
     padding: 10px;  
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    gap: 10px;
+}
+
+.grid-container main {
+    display: grid;
+    grid-template-columns: auto 80%;
+    gap: 10px;
+}
+
+
+.grid-container .grilla {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 20px;
 }
