@@ -10,6 +10,21 @@ header {
     padding: 10px;
 }
 
+main {
+    display: flex;
+}
+
+main .aside-bar {
+    background-color: antiquewhite;
+    width: 250px;
+    min-height: 86vh;
+    padding: 25px;
+}
+
+main .aside-bar ul {
+    list-style: none;
+}
+
 footer {
     text-align: center;
     padding: 10px;  
